@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos input de tipo radio</title>
+</head>
+
+<body>
+    <form name="formulario" action="">
+        <fieldset>
+            <legend>Selecciona tu actor favorito:</legend>
+            <input type="radio" name="actores" id="actor-1" value="Mario Vaquerizo - 12 de Noviembre de 1993" checked>
+            <label for="actor-1">Mario</label>
+            <input type="radio" name="actores" id="actor-2" value="Jorge Ordiz - 16 de Diciembre de 1997">
+            <label for="actor-2">Jorge</label>
+            <input type="radio" name="actores" id="actor-3" value=" Alejandro Corroto - 16 de Noviembre de 1999">
+            <label for="actor-3">Alejandro</label>
+            <input type="button" id="consultar" name="consultar" value="Consultar Más Datos" onclick="mostrarDatos()">
+        </fieldset>
+    </form>
+
+    <script>
+        // const mostrarDatos = () => {
+        //     document.formulario.actores.forEach(actor =>
+        //         actor.checked ? alert(actor.value) : null
+        //     );
+        // }
+
+        function mostrarDatos() {
+            for (let i = 0; i < document.formulario.actores.length; i++) {
+                if (document.formulario.actores[i].checked) {
+                    alert(document.formulario.actores[i].value)
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
